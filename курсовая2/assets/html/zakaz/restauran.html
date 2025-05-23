@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/zakaz/restauran.css" />
+    <title>Tabs</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="heade container">
+        <div class="HeadBgIcon">
+          <a href="/index.html"
+            ><img src="/assets/images/icons/AboutIcon.svg" alt=""
+          /></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/assets/html/registration.html">войти</a></li>
+            <li><a href="./assets/html/pederjka.html">поддержка</a></li>
+            <li><a href="./assets/html/about.html">о нас</a></li>
+            <li><a href="">заказ</a></li>
+            <li><a href="">акции</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="restaurants-header">
+          <h1>Выберите кухню или магазин</h1>
+          <p>Более 50 проверенных партнеров в вашем городе</p>
+        </div>
+
+        <!-- Категории -->
+        <div class="categories">
+          <button class="category-btn active" data-tab="all">Все</button>
+          <button class="category-btn" data-tab="restaurants">Рестораны</button>
+          <button class="category-btn" data-tab="shops">Магазины</button>
+          <button class="category-btn" data-tab="pizza">Пицца</button>
+          <button class="category-btn" data-tab="asian">Азиатская</button>
+          <button class="category-btn" data-tab="fastfood">Фастфуд</button>
+          <button class="category-btn" data-tab="healthy">
+            Здоровое питание
+          </button>
+        </div>
+
+        <!-- Все -->
+        <div id="all" class="tab-content active">
+          <!-- Рестораны -->
+          <h2 class="section-title">Рестораны</h2>
+          <div class="partners-grid">
+            <div class="partner-card" data-category="restaurants">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Итальянский дворик</h3>
+                <div class="partner-meta">
+                  <span>Итальянская кухня</span>
+                  <span class="partner-rating">4.8 ★</span>
+                </div>
+                <form action="./product.html">
+                  <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-card" data-category="restaurants">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Токио Суши</h3>
+                <div class="partner-meta">
+                  <span>Японская кухня</span>
+                  <span class="partner-rating">4.7 ★</span>
+                </div>
+                <form action="./product.html">
+                  <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-card" data-category="restaurants">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Бургер Хаус</h3>
+                <div class="partner-meta">
+                  <span>Фастфуд</span>
+                  <span class="partner-rating">4.5 ★</span>
+                </div>
+                <form action="./product.html">
+                  <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-card" data-category="restaurants">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Грузинские традиции</h3>
+                <div class="partner-meta">
+                  <span>Кавказская кухня</span>
+                  <span class="partner-rating">4.9 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Магазины -->
+          <h2 class="section-title">Продуктовые магазины</h2>
+          <div class="partners-grid">
+            <div class="partner-card" data-category="shops">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Фермерские продукты</h3>
+                <div class="partner-meta">
+                  <span>Свежие продукты</span>
+                  <span class="partner-rating">4.8 ★</span>
+                </div>
+                <form action="./product.html">
+                  <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-card" data-category="shops">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Овощная лавка</h3>
+                <div class="partner-meta">
+                  <span>Фрукты и овощи</span>
+                  <span class="partner-rating">4.6 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-card" data-category="shops">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Кондитерская "Сласть"</h3>
+                <div class="partner-meta">
+                  <span>Десерты и выпечка</span>
+                  <span class="partner-rating">4.9 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Пицца -->
+          <h2 class="section-title">Пиццерии</h2>
+          <div class="partners-tab">
+            <div class="partner-tabs" data-category="pizza">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Пицца Итальяна</h3>
+                <div class="partner-meta">
+                  <span>Итальянская пицца</span>
+                  <span class="partner-rating">4.8 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-tabs" data-category="pizza">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Пицца Мания</h3>
+                <div class="partner-meta">
+                  <span>Американская пицца</span>
+                  <span class="partner-rating">4.6 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Азиатская кухня -->
+          <h2 class="section-title">Азиатская кухня</h2>
+          <div class="partners-tab">
+            <div class="partner-tabs" data-category="asian">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Вкус Азии</h3>
+                <div class="partner-meta">
+                  <span>Паназиатская кухня</span>
+                  <span class="partner-rating">4.7 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-tabs" data-category="asian">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Вок Мастер</h3>
+                <div class="partner-meta">
+                  <span>Китайская кухня</span>
+                  <span class="partner-rating">4.5 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Фастфуд -->
+          <h2 class="section-title">Фастфуд</h2>
+          <div class="partners-grid">
+            <div class="partner-card" data-category="fastfood">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Burger King</h3>
+                <div class="partner-meta">
+                  <span>Бургеры</span>
+                  <span class="partner-rating">4.3 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-card" data-category="fastfood">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>KFC</h3>
+                <div class="partner-meta">
+                  <span>Курица</span>
+                  <span class="partner-rating">4.4 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Здоровое питание -->
+          <h2 class="section-title">Здоровое питание</h2>
+          <div class="partners-grid">
+            <div class="partner-card" data-category="healthy">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Green Life</h3>
+                <div class="partner-meta">
+                  <span>Вегетарианская кухня</span>
+                  <span class="partner-rating">4.9 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-card" data-category="healthy">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Фитнес Фуд</h3>
+                <div class="partner-meta">
+                  <span>Диетическое питание</span>
+                  <span class="partner-rating">4.8 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Рестораны -->
+        <div id="restaurants" class="tab-content">
+          <h2 class="section-title">Рестораны</h2>
+          <div class="partners-tab">
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Итальянский дворик</h3>
+                <div class="partner-meta">
+                  <span>Итальянская кухня</span>
+                  <span class="partner-rating">4.8 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Токио Суши</h3>
+                <div class="partner-meta">
+                  <span>Японская кухня</span>
+                  <span class="partner-rating">4.7 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Бургер Хаус</h3>
+                <div class="partner-meta">
+                  <span>Фастфуд</span>
+                  <span class="partner-rating">4.5 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Грузинские традиции</h3>
+                <div class="partner-meta">
+                  <span>Кавказская кухня</span>
+                  <span class="partner-rating">4.9 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Вкус Азии</h3>
+                <div class="partner-meta">
+                  <span>Паназиатская кухня</span>
+                  <span class="partner-rating">4.7 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Магазины -->
+        <div id="shops" class="tab-content">
+          <h2 class="section-title">Продуктовые магазины</h2>
+
+          <div class="partners-tab">
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Фермерские продукты</h3>
+                <div class="partner-meta">
+                  <span>Свежие продукты</span>
+                  <span class="partner-rating">4.8 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Овощная лавка</h3>
+                <div class="partner-meta">
+                  <span>Фрукты и овощи</span>
+                  <span class="partner-rating">4.6 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Кондитерская "Сласть"</h3>
+                <div class="partner-meta">
+                  <span>Десерты и выпечка</span>
+                  <span class="partner-rating">4.9 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Органик Маркет</h3>
+                <div class="partner-meta">
+                  <span>Органические продукты</span>
+                  <span class="partner-rating">4.9 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Пицца -->
+        <div id="pizza" class="tab-content">
+          <h2 class="section-title">Пиццерии</h2>
+          <div class="partners-tab">
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Пицца Итальяна</h3>
+                <div class="partner-meta">
+                  <span>Итальянская пицца</span>
+                  <span class="partner-rating">4.8 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Пицца Мания</h3>
+                <div class="partner-meta">
+                  <span>Американская пицца</span>
+                  <span class="partner-rating">4.6 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1601924582970-9238bcb495d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Додо Пицца</h3>
+                <div class="partner-meta">
+                  <span>Русская пицца</span>
+                  <span class="partner-rating">4.7 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Пицца Хат</h3>
+                <div class="partner-meta">
+                  <span>Международная кухня</span>
+                  <span class="partner-rating">4.5 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Азиатская кухня -->
+        <div id="asian" class="tab-content">
+          <h2 class="section-title">Азиатская кухня</h2>
+          <div class="partners-tab">
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Вкус Азии</h3>
+                <div class="partner-meta">
+                  <span>Паназиатская кухня</span>
+                  <span class="partner-rating">4.7 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Вок Мастер</h3>
+                <div class="partner-meta">
+                  <span>Китайская кухня</span>
+                  <span class="partner-rating">4.5 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Токио Суши</h3>
+                <div class="partner-meta">
+                  <span>Японская кухня</span>
+                  <span class="partner-rating">4.7 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-tabs">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Кореана</h3>
+                <div class="partner-meta">
+                  <span>Корейская кухня</span>
+                  <span class="partner-rating">4.8 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Фастфуд -->
+        <div id="fastfood" class="tab-content">
+          <h2 class="section-title">Фастфуд</h2>
+          <div class="partners-grid">
+            <div class="partner-card" data-category="fastfood">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Burger King</h3>
+                <div class="partner-meta">
+                  <span>Бургеры</span>
+                  <span class="partner-rating">4.3 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-card" data-category="fastfood">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>KFC</h3>
+                <div class="partner-meta">
+                  <span>Курица</span>
+                  <span class="partner-rating">4.4 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="healthy" class="tab-content"> <h2 class="section-title">Здоровое питание</h2>
+          <div class="partners-tab">
+            <div class="partner-tabs" data-category="healthy">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Green Life</h3>
+                <div class="partner-meta">
+                  <span>Вегетарианская кухня</span>
+                  <span class="partner-rating">4.9 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="partner-tabs" data-category="healthy">
+              <div
+                class="partner-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                "
+              ></div>
+              <div class="partner-info">
+                <h3>Фитнес Фуд</h3>
+                <div class="partner-meta">
+                  <span>Диетическое питание</span>
+                  <span class="partner-rating">4.8 ★</span>
+                </div>
+                <form action="./product.html">
+                  <button class="partner-btn">Выбрать</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </main>
+    <script src="/assets/js/restauran.js"></script>
+  </body>
+</html>
