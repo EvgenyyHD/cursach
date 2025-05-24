@@ -1,317 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
+
     <script src="/assets/js/product.js"></script>
-    <link rel="stylesheet" href="/assets/css/zakaz/product.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/assets/css/zakaz/product.css" />
+  </head>
+  <body>
     <header>
-        <div class="heade container">
-          <div class="HeadBgIcon">
-            <a href="./index.html"
-              ><img src="/assets/images/icons/AboutIcon.svg" alt=""
-            /></a>
+      <div class="heade container">
+        <div class="HeadBgIcon">
+          <a href="./index.html"
+            ><img src="/assets/images/icons/AboutIcon.svg" alt=""
+          /></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/assets/html/registration.html">войти</a></li>
+            <li><a href="./assets/html/pederjka.html">поддержка</a></li>
+            <li><a href="./assets/html/about.html">о нас</a></li>
+            <li><a href="">заказ</a></li>
+            <li><a href="">акции</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main container">
+      <h1>Меню и продукты</h1>
+
+      <!-- Поиск и фильтры -->
+      <div class="search-filters">
+        <div class="search-box">
+          <span class="search-icon"
+            ><img src="/assets/images/icons/search-icon.svg" alt=""
+          /></span>
+          <input type="text" placeholder="Поиск блюд и продуктов..." />
+        </div>
+      </div>
+
+      <!-- Категории -->
+      <div class="categories-scroll">
+        <button class="category-tag active">Все категории</button>
+        <button class="category-tag">Пицца</button>
+        <button class="category-tag">Суши</button>
+        <button class="category-tag">Бургеры</button>
+        <button class="category-tag">Салаты</button>
+        <button class="category-tag">Десерты</button>
+        <button class="category-tag">Вегетарианское</button>
+        <button class="category-tag">Фрукты</button>
+        <button class="category-tag">Овощи</button>
+      </div>
+
+      <!-- Сетка продуктов -->
+      <div class="products-grid">
+        <!-- Группа продуктов 1 -->
+        <div class="product-card">
+          <div class="product-badge">Хит</div>
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Пицца Пепперони с томатами</h3>
+            <div class="product-meta">
+              <span class="product-price">599 ₽</span>
+              <span class="product-weight">550 г</span>
+            </div>
+            <div class="product-actions">
+              <span class="product-rating">4.8 ★</span>
+              <button class="add-to-cart">+</button>
+            </div>
           </div>
-          <nav>
-            <ul>
-              <li><a href="/assets/html/registration.html">войти</a></li>
-              <li><a href="./assets/html/pederjka.html">поддержка</a></li>
-              <li><a href="./assets/html/about.html">о нас</a></li>
-              <li><a href="">заказ</a></li>
-              <li><a href="">акции</a></li>
-            </ul>
-          </nav>
         </div>
-      </header>
-      <main class="main container">
-        <h1>Меню и продукты</h1>
-        
-        <!-- Поиск и фильтры -->
-        <div class="search-filters">
-            <div class="search-box">
-                <span class="search-icon"><img src="/assets/images/icons/search-icon.svg" alt=""></span>
-                <input type="text" placeholder="Поиск блюд и продуктов...">
+
+        <div class="product-card">
+          <div class="product-badge">Новинка</div>
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Ролл Филадельфия с угрем</h3>
+            <div class="product-meta">
+              <span class="product-price">459 ₽</span>
+              <span class="product-weight">250 г</span>
             </div>
-            <button class="filter-btn active">Все</button>
-            <button class="filter-btn">Популярные</button>
-            <button class="filter-btn">Новинки</button>
-            <button class="filter-btn">Акции</button>
+            <div class="product-actions">
+              <span class="product-rating">4.9 ★</span>
+              <button class="add-to-cart">+</button>
+            </div>
+          </div>
         </div>
-        
-        <!-- Категории -->
-        <div class="categories-scroll">
-            <button class="category-tag active">Все категории</button>
-            <button class="category-tag">Пицца</button>
-            <button class="category-tag">Суши</button>
-            <button class="category-tag">Бургеры</button>
-            <button class="category-tag">Салаты</button>
-            <button class="category-tag">Десерты</button>
-            <button class="category-tag">Напитки</button>
-            <button class="category-tag">Завтраки</button>
-            <button class="category-tag">Паста</button>
-            <button class="category-tag">Гриль</button>
-            <button class="category-tag">Вегетарианское</button>
-            <button class="category-tag">Фрукты</button>
-            <button class="category-tag">Овощи</button>
+
+        <div class="product-card">
+          <div class="product-badge">Акция</div>
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Чизбургер с беконом</h3>
+            <div class="product-meta">
+              <span class="product-price">299 ₽</span>
+              <span class="product-weight">320 г</span>
+            </div>
+            <div class="product-actions">
+              <span class="product-rating">4.7 ★</span>
+              <button class="add-to-cart">+</button>
+            </div>
+          </div>
         </div>
-        
-        <!-- Сетка продуктов -->
-        <div class="products-grid">
-            <!-- Группа продуктов 1 -->
-            <div class="product-card">
-                <div class="product-badge">Хит</div>
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Пицца Пепперони с томатами</h3>
-                    <div class="product-meta">
-                        <span class="product-price">599 ₽</span>
-                        <span class="product-weight">550 г</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.8 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
+
+        <div class="product-card">
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Салат Цезарь с курицей</h3>
+            <div class="product-meta">
+              <span class="product-price">349 ₽</span>
+              <span class="product-weight">280 г</span>
             </div>
-            
-            <div class="product-card">
-                <div class="product-badge">Новинка</div>
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Ролл Филадельфия с угрем</h3>
-                    <div class="product-meta">
-                        <span class="product-price">459 ₽</span>
-                        <span class="product-weight">250 г</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.9 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
+            <div class="product-actions">
+              <span class="product-rating">4.6 ★</span>
+              <button class="add-to-cart">+</button>
             </div>
-            
-            <div class="product-card">
-                <div class="product-badge">Акция</div>
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Чизбургер с беконом</h3>
-                    <div class="product-meta">
-                        <span class="product-price">299 ₽</span>
-                        <span class="product-weight">320 г</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.7 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Салат Цезарь с курицей</h3>
-                    <div class="product-meta">
-                        <span class="product-price">349 ₽</span>
-                        <span class="product-weight">280 г</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.6 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Группа продуктов 2 -->
-            <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Тирамису классический</h3>
-                    <div class="product-meta">
-                        <span class="product-price">259 ₽</span>
-                        <span class="product-weight">150 г</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.9 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-badge">Акция</div>
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Смузи ягодный</h3>
-                    <div class="product-meta">
-                        <span class="product-price">199 ₽</span>
-                        <span class="product-weight">350 мл</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.5 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Американские блинчики</h3>
-                    <div class="product-meta">
-                        <span class="product-price">329 ₽</span>
-                        <span class="product-weight">300 г</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.8 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Паста Карбонара</h3>
-                    <div class="product-meta">
-                        <span class="product-price">429 ₽</span>
-                        <span class="product-weight">400 г</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.7 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Группа продуктов 3 -->
-            <div class="product-card">
-                <div class="product-badge">Хит</div>
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Чизбургер двойной</h3>
-                    <div class="product-meta">
-                        <span class="product-price">379 ₽</span>
-                        <span class="product-weight">380 г</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.8 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Салат Греческий</h3>
-                    <div class="product-meta">
-                        <span class="product-price">299 ₽</span>
-                        <span class="product-weight">250 г</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.6 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-badge">Новинка</div>
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Шоколадный фондан</h3>
-                    <div class="product-meta">
-                        <span class="product-price">279 ₽</span>
-                        <span class="product-weight">180 г</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.9 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Курица гриль с овощами</h3>
-                    <div class="product-meta">
-                        <span class="product-price">499 ₽</span>
-                        <span class="product-weight">450 г</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.7 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Группа продуктов 4 -->
-            <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Спагетти Болоньезе</h3>
-                    <div class="product-meta">
-                        <span class="product-price">449 ₽</span>
-                        <span class="product-weight">400 г</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.8 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-badge">Акция</div>
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Фалафель с хумусом</h3>
-                    <div class="product-meta">
-                        <span class="product-price">349 ₽</span>
-                        <span class="product-weight">300 г</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.5 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1573821663912-569905455b1c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Свежие ягоды (ассорти)</h3>
-                    <div class="product-meta">
-                        <span class="product-price">399 ₽</span>
-                        <span class="product-weight">500 г</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.9 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="product-info">
-                    <h3>Овощное рагу</h3>
-                    <div class="product-meta">
-                        <span class="product-price">279 ₽</span>
-                        <span class="product-weight">350 г</span>
-                    </div>
-                    <div class="product-actions">
-                        <span class="product-rating">4.6 ★</span>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-      </main>
-</body>
+
+        <!-- Группа продуктов 2 -->
+        <div class="product-card">
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Тирамису классический</h3>
+            <div class="product-meta">
+              <span class="product-price">259 ₽</span>
+              <span class="product-weight">150 г</span>
+            </div>
+            <div class="product-actions">
+              <span class="product-rating">4.9 ★</span>
+              <button class="add-to-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-badge">Акция</div>
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Смузи ягодный</h3>
+            <div class="product-meta">
+              <span class="product-price">199 ₽</span>
+              <span class="product-weight">350 мл</span>
+            </div>
+            <div class="product-actions">
+              <span class="product-rating">4.5 ★</span>
+              <button class="add-to-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Американские блинчики</h3>
+            <div class="product-meta">
+              <span class="product-price">329 ₽</span>
+              <span class="product-weight">300 г</span>
+            </div>
+            <div class="product-actions">
+              <span class="product-rating">4.8 ★</span>
+              <button class="add-to-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Паста Карбонара</h3>
+            <div class="product-meta">
+              <span class="product-price">429 ₽</span>
+              <span class="product-weight">400 г</span>
+            </div>
+            <div class="product-actions">
+              <span class="product-rating">4.7 ★</span>
+              <button class="add-to-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Группа продуктов 3 -->
+        <div class="product-card">
+          <div class="product-badge">Хит</div>
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Чизбургер двойной</h3>
+            <div class="product-meta">
+              <span class="product-price">379 ₽</span>
+              <span class="product-weight">380 г</span>
+            </div>
+            <div class="product-actions">
+              <span class="product-rating">4.8 ★</span>
+              <button class="add-to-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Салат Греческий</h3>
+            <div class="product-meta">
+              <span class="product-price">299 ₽</span>
+              <span class="product-weight">250 г</span>
+            </div>
+            <div class="product-actions">
+              <span class="product-rating">4.6 ★</span>
+              <button class="add-to-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-badge">Новинка</div>
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Шоколадный фондан</h3>
+            <div class="product-meta">
+              <span class="product-price">279 ₽</span>
+              <span class="product-weight">180 г</span>
+            </div>
+            <div class="product-actions">
+              <span class="product-rating">4.9 ★</span>
+              <button class="add-to-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Курица гриль с овощами</h3>
+            <div class="product-meta">
+              <span class="product-price">499 ₽</span>
+              <span class="product-weight">450 г</span>
+            </div>
+            <div class="product-actions">
+              <span class="product-rating">4.7 ★</span>
+              <button class="add-to-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Группа продуктов 4 -->
+        <div class="product-card">
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Спагетти Болоньезе</h3>
+            <div class="product-meta">
+              <span class="product-price">449 ₽</span>
+              <span class="product-weight">400 г</span>
+            </div>
+            <div class="product-actions">
+              <span class="product-rating">4.8 ★</span>
+              <button class="add-to-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-badge">Акция</div>
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Фалафель с хумусом</h3>
+            <div class="product-meta">
+              <span class="product-price">349 ₽</span>
+              <span class="product-weight">300 г</span>
+            </div>
+            <div class="product-actions">
+              <span class="product-rating">4.5 ★</span>
+              <button class="add-to-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1573821663912-569905455b1c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Свежие ягоды (ассорти)</h3>
+            <div class="product-meta">
+              <span class="product-price">399 ₽</span>
+              <span class="product-weight">500 г</span>
+            </div>
+            <div class="product-actions">
+              <span class="product-rating">4.9 ★</span>
+              <button class="add-to-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div
+            class="product-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            "
+          ></div>
+          <div class="product-info">
+            <h3>Овощное рагу</h3>
+            <div class="product-meta">
+              <span class="product-price">279 ₽</span>
+              <span class="product-weight">350 г</span>
+            </div>
+            <div class="product-actions">
+              <span class="product-rating">4.6 ★</span>
+              <button class="add-to-cart">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Кнопка корзины -->
+    <div class="cart-fab">
+      <img src="/assets/images/icons/cart-icon.svg" alt="Корзина" />
+      <span class="cart-badge">0</span>
+    </div>
+
+    <!-- Оверлей и контейнер корзины -->
+    <div class="cart-overlay"></div>
+    <div class="cart-container">
+      <div class="cart-header">
+        <h2 class="cart-title">Ваша корзина</h2>
+        <button class="close-cart">&times;</button>
+      </div>
+      <div class="cart-items">
+        <!-- Товары будут добавляться сюда динамически -->
+        <div class="empty-cart">Корзина пуста</div>
+      </div>
+      <div class="cart-total">
+        <span>Итого:</span>
+        <span class="total-price">0 ₽</span>
+      </div>
+      <button class="checkout-btn">Оформить заказ</button>
+    </div>
+    <script src="/assets/js/zakaz/product.js"></script>
+  </body>
 </html>
