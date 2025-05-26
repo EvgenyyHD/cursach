@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/assets/css/pers_account.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Личный кабинет</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="heade">
+        <div class="HeadBgIcon">
+          <a href="/index.html"
+            ><img src="/assets/images/icons/AboutIcon.svg" alt=""
+          /></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/assets/html/pederjka.html">поддержка</a></li>
+            <li><a href="/assets/html/about.html">о нас</a></li>
+            <li><a href="/assets/html/zakaz/restauran.html">заказ</a></li>
+            <li><a href="/assets/html/akcii.html">акции</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="user-profile-container">
+      <!-- Левая часть - информация о пользователе -->
+      <div class="user-info-section">
+        <div class="user-profile-card">
+          <div class="profile-image-container">
+            <img
+              src="/assets/images/imagesee/MaxwellCat.png"
+              alt="Фото профиля"
+              class="profile-image"
+            />
+            <button class="edit-profile-btn">Изменить фото</button>
+          </div>
+
+          <div class="user-details">
+            <h2 class="user-name">Иван Иванов</h2>
+            <p class="user-id">ID: 123456789</p>
+
+            <div class="info-field">
+              <span class="field-label">Телефон:</span>
+              <span class="field-value">+7 (123) 456-78-90</span>
+            </div>
+
+            <div class="info-field">
+              <span class="field-label">Email:</span>
+              <span class="field-value">ivanov@example.com</span>
+            </div>
+
+            <div class="info-field password-field">
+              <span class="field-label">Пароль:</span>
+              <span class="field-value">••••••••</span>
+              <button class="show-password-btn">Показать</button>
+            </div>
+            <form action="/index.html">
+              <button class="logout-btn">Выйти из аккаунта</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Правая часть - история заказов -->
+      <div class="orders-section">
+        <h1 class="orders-title">Мои заказы</h1>
+
+        <div class="orders-list">
+          <!-- Карточка заказа 1 -->
+          <div class="order-card">
+            <div
+              class="order-image"
+              style="
+                background-image: url('/assets/images/imagesee/pers_account/ivan-torres-MQUqbmszGGM-unsplash.jpg');
+              "
+            ></div>
+            <div class="order-info">
+              <div class="order-header">
+                <h3 class="order-number">Заказ #12345</h3>
+                <span class="order-date">12.05.2023</span>
+              </div>
+
+              <div class="order-items-preview">
+                <p>Чизбургер</p>
+                <p>Картофель фри</p>
+                <p>Кола (0.5л)</p>
+              </div>
+
+              <div class="order-footer">
+                <span class="order-total">850 ₽</span>
+                <button class="view-details-btn" data-order-id="12345">
+                  Подробнее
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка заказа 2 -->
+          <div class="order-card">
+            <div
+              class="order-image"
+              style="
+                background-image: url('/assets/images/imagesee/pers_account/katherine-sousa-ln2R1wJ8TCM-unsplash.jpg');
+              "
+            ></div>
+            <div class="order-info">
+              <div class="order-header">
+                <h3 class="order-number">Заказ #12344</h3>
+                <span class="order-date">10.05.2023</span>
+              </div>
+
+              <div class="order-items-preview">
+                <p>Биг Мак</p>
+                <p>Чикен Макнаггетс (6шт)</p>
+                <p>Молочный коктейль</p>
+              </div>
+
+              <div class="order-footer">
+                <span class="order-total">920 ₽</span>
+                <button class="view-details-btn" data-order-id="12344">
+                  Подробнее
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка заказа 3 -->
+          <div class="order-card">
+            <div
+              class="order-image"
+              style="
+                background-image: url('/assets/images/imagesee/pers_account/vinicius-benedit--1GEAA8q3wk-unsplash.jpg');
+              "
+            ></div>
+            <div class="order-info">
+              <div class="order-header">
+                <h3 class="order-number">Заказ #12343</h3>
+                <span class="order-date">05.05.2023</span>
+              </div>
+
+              <div class="order-items-preview">
+                <p>Двойной Чизбургер</p>
+                <p>Картофель по-деревенски</p>
+                <p>Айс Теа (0.5л)</p>
+              </div>
+
+              <div class="order-footer">
+                <span class="order-total">780 ₽</span>
+                <button class="view-details-btn" data-order-id="12343">
+                  Подробнее
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно с деталями заказа -->
+    <div class="order-details-modal" id="orderDetailsModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 class="modal-order-title">Заказ #12345</h2>
+        <p class="modal-order-date">12 мая 2023, 18:30</p>
+        <p class="modal-order-status">
+          Статус: <span class="status-delivered">Доставлен</span>
+        </p>
+
+        <div class="order-items-list">
+          <div class="order-item">
+            <div class="item-info">
+              <h4 class="item-name">Чизбургер</h4>
+              <p class="item-details">1 x 250 ₽</p>
+            </div>
+            <span class="item-total">250 ₽</span>
+          </div>
+
+          <div class="order-item">
+            <div class="item-info">
+              <h4 class="item-name">Картофель фри</h4>
+              <p class="item-details">1 x 150 ₽</p>
+            </div>
+            <span class="item-total">150 ₽</span>
+          </div>
+
+          <div class="order-item">
+            <div class="item-info">
+              <h4 class="item-name">Кола (0.5л)</h4>
+              <p class="item-details">1 x 120 ₽</p>
+            </div>
+            <span class="item-total">120 ₽</span>
+          </div>
+
+          <div class="order-item">
+            <div class="item-info">
+              <h4 class="item-name">Соус барбекю</h4>
+              <p class="item-details">1 x 30 ₽</p>
+            </div>
+            <span class="item-total">30 ₽</span>
+          </div>
+        </div>
+
+        <div class="order-summary">
+          <div class="summary-row">
+            <span>Стоимость заказа:</span>
+            <span>550 ₽</span>
+          </div>
+          <div class="summary-row">
+            <span>Доставка:</span>
+            <span>300 ₽</span>
+          </div>
+          <div class="summary-row total-row">
+            <span>Итого:</span>
+            <span>850 ₽</span>
+          </div>
+        </div>
+
+        <button class="repeat-order-btn">Повторить заказ</button>
+      </div>
+    </div>
+    <script src="/assets/js/pers_account.js"></script>
+  </body>
+</html>

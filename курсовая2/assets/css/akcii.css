@@ -1,0 +1,613 @@
+/* Стили для страницы акций */
+
+
+@font-face {
+  font-family: "Arial-Regular";
+  src: url("../fonts/arialmt.ttf");
+}
+
+@font-face {
+  font-family: "Arial-Bold";
+  src: url("../fonts/arial_bolditalicmt.ttf");
+}
+
+@font-face {
+  font-family: "RubicMonoOne";
+  src: url("../fonts/RubikMonoOne-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #303030;
+}
+.container {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+/* шапка сайта */
+
+.heade {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #faf2e9;
+  padding: 10px;
+}
+.header{
+  background-color: #faf2e9;
+}
+.HeadBgIcon {
+  background: #f85f73;
+  border-radius: 18px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: solid 0px;
+}
+
+.HeadBgIcon img {
+  width: 40px;
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  font-family: "RubicMonoOne", sans-serif;
+  font-size: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #303030;
+  padding: 5px;
+  white-space: nowrap;
+}
+/* Сезонное предложение */
+.season-offer {
+  margin: 40px auto;
+}
+
+.offer-banner {
+  background-color: #f85f73;
+  border-radius: 29px;
+  padding: 30px;
+  color: #faf2e9;
+  text-align: center;
+}
+
+.offer-banner h2 {
+  font-family: "RubicMonoOne";
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.offer-banner p {
+  font-family: "Arial-Regular";
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.offer-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.offer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+
+.offer-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.offer-item p {
+  font-family: "Arial-Bold";
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.offer-item span {
+  font-family: "RubicMonoOne";
+  font-size: 20px;
+  color: #303030;
+  background-color: #faf2e9;
+  padding: 3px 10px;
+  border-radius: 15px;
+}
+
+.offer-banner button {
+  background-color: #303030;
+  color: #faf2e9;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 28px;
+  font-family: "RubicMonoOne";
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.offer-banner button:hover {
+  transform: scale(1.05);
+}
+
+/* Основные акции */
+.promotions h1 {
+  font-family: "RubicMonoOne";
+  font-size: 36px;
+  color: #faf2e9;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.promo-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.promo-card {
+  background-color: #faf2e9;
+  border-radius: 20px;
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.timer-card {
+  background-color: #303030;
+  color: #faf2e9;
+  border: 2px solid #f85f73;
+}
+
+.timer {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 2rem 0.5rem 3rem 0.5rem 3rem 0.5rem 3rem;
+  font-size: 3rem;
+  justify-items: center;
+  }
+  .timer__item {
+  position: relative;
+  font-family: "Arial-Regular";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 122%;
+  letter-spacing: 0.01em;
+  color: #fff;
+  }
+  .separator{
+  font-family: "Arial-Regular";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 122%;
+  letter-spacing: 0.01em;
+  color: #fff;
+  }
+  .timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  }
+
+.promo-content {
+  padding: 25px;
+  flex: 1;
+}
+
+.promo-card h3 {
+  font-family: "RubicMonoOne";
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.promo-card p {
+  font-family: "Arial-Regular";
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.promo-code {
+  font-family: "Arial-Bold";
+  font-size: 14px;
+  color: #f85f73;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #faf2e9;
+  border-radius: 10px;
+  border: 1px dashed #f85f73;
+}
+
+.promo-image {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f85f73;
+}
+
+.promo-image img {
+  width: 80px;
+  height: 80px;
+}
+
+/* Слайдер акций */
+
+
+
+.promo-slider {
+  margin: 60px 0;
+}
+
+.promo-slider h2 {
+  font-family: "RubicMonoOne";
+  font-size: 24px;
+  color: #faf2e9;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider-item {
+  min-width: calc(33.333% - 20px);
+  margin-right: 20px;
+  background-color: #faf2e9;
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.slider-item h4 {
+  font-family: "RubicMonoOne";
+  font-size: 18px;
+  color: #303030;
+  margin-bottom: 10px;
+}
+
+.slider-item p {
+  font-family: "Arial-Regular";
+  font-size: 14px;
+  color: #303030;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.slider-controls button {
+  background-color: #f85f73;
+  color: #faf2e9;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-family: "Arial-Bold";
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.slider-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #faf2e9;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.dot.active {
+  opacity: 1;
+  background-color: #f85f73;
+}
+
+/* Категории акций */
+.promo-categories {
+  margin: 80px 0;
+}
+
+.promo-categories h2 {
+  font-family: "RubicMonoOne";
+  font-size: 24px;
+  color: #faf2e9;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.category-item {
+  height: 150px;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  z-index: 1;
+}
+
+.category-item h3 {
+  font-family: "RubicMonoOne";
+  font-size: 20px;
+  color: #faf2e9;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 5px;
+}
+
+.category-item p {
+  font-family: "Arial-Regular";
+  font-size: 14px;
+  color: #faf2e9;
+  position: relative;
+  z-index: 2;
+}
+
+/* Фоны для категорий */
+.pizza {
+  background: url('../images/pizza-bg.jpg') center/cover;
+}
+
+.sushi {
+  background: url('../images/sushi-bg.jpg') center/cover;
+}
+
+.burger {
+  background: url('../images/burger-bg.jpg') center/cover;
+}
+
+.dessert {
+  background: url('../images/dessert-bg.jpg') center/cover;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .promo-card {
+    flex-direction: column;
+  }
+  
+  .promo-image {
+    width: 100%;
+    height: 100px;
+  }
+  
+  .slider-item {
+    min-width: calc(50% - 15px);
+  }
+  
+  .offer-items {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-item {
+    min-width: 100%;
+  }
+  
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .season-offer {
+    margin: 20px auto;
+  }
+  
+  .offer-banner {
+    padding: 20px;
+  }
+}
+
+
+.fot_part{
+  background: linear-gradient(to bottom,#303030 80%, #faf2e9 20%);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: end;
+  .icn{
+    position: absolute;
+    width: 90px;
+  }
+
+}
+
+
+
+
+.fote{
+background-color: #faf2e9;
+}
+.fote hr {
+  width: 100%;
+height: 11px;background-color: #303030;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+}
+.fote p{
+  font-family: "Arial-Regular";
+font-weight: 400;
+font-size: 13px;
+line-height: 122%;
+letter-spacing: 0.01em;
+color: #303030;
+opacity: 0.63;
+}
+.fote a{
+  font-family: "Arial-Regular";
+font-weight: 400;
+font-size: 13px;
+line-height: 122%;
+letter-spacing: 0.01em;
+color: #303030;
+opacity: 0.63;
+}
+.nav1{
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 20px;
+}
+.nav2{
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 7px;
+  margin-top: 20px;
+}
+.polit{
+  font-family: "Arial-Regular";
+font-weight: 400;
+font-size: 13px;
+line-height: 122%;
+letter-spacing: 0.01em;
+color: #303030;
+opacity: 0.63;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  padding-bottom: 10px;
+}
+.dffd{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.fot_part {
+  background: linear-gradient(to bottom, #303030 80%, #faf2e9 20%);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: end;
+  .icn {
+    position: absolute;
+    width: 90px;
+  }
+}
+
+.fote {
+  background-color: #faf2e9;
+}
+.fote hr {
+  width: 100%;
+  height: 11px;
+  background-color: #303030;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.fote p {
+  font-family: "Arial-Regular";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 122%;
+  letter-spacing: 0.01em;
+  color: #303030;
+  opacity: 0.63;
+}
+.fote a {
+  font-family: "Arial-Regular";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 122%;
+  letter-spacing: 0.01em;
+  color: #303030;
+  opacity: 0.63;
+}
+.nav1 {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 20px;
+}
+.nav2 {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 7px;
+  margin-top: 20px;
+}
+.polit {
+  font-family: "Arial-Regular";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 122%;
+  letter-spacing: 0.01em;
+  color: #303030;
+  opacity: 0.63;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  padding-bottom: 10px;
+}
+.dffd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

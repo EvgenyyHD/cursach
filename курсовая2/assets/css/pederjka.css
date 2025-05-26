@@ -296,3 +296,81 @@ select {
 .quick-link:hover {
   background: #303030;
 }
+
+
+
+.fot_part {
+  background: linear-gradient(to bottom, #303030 80%, #faf2e9 20%);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: end;
+  margin-top: 200px;
+  .icn {
+    position: absolute;
+    width: 90px;
+  }
+}
+
+.fote {
+  background-color: #faf2e9;
+}
+.fote hr {
+  width: 100%;
+  height: 11px;
+  background-color: #303030;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.fote p {
+  font-family: "Arial-Regular";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 122%;
+  letter-spacing: 0.01em;
+  color: #303030;
+  opacity: 0.63;
+}
+.fote a {
+  font-family: "Arial-Regular";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 122%;
+  letter-spacing: 0.01em;
+  color: #303030;
+  opacity: 0.63;
+}
+.nav1 {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 20px;
+}
+.nav2 {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 7px;
+  margin-top: 20px;
+}
+.polit {
+  font-family: "Arial-Regular";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 122%;
+  letter-spacing: 0.01em;
+  color: #303030;
+  opacity: 0.63;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  padding-bottom: 10px;
+}
+.dffd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

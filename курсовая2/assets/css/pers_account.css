@@ -1,0 +1,524 @@
+
+@font-face {
+  font-family: "Arial-Regular";
+  src: url("../fonts/arialmt.ttf");
+}
+
+@font-face {
+  font-family: "Arial-Bold";
+  src: url("../fonts/arial_bolditalicmt.ttf");
+}
+
+@font-face {
+  font-family: "RubicMonoOne";
+  src: url("../fonts/RubikMonoOne-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial-Regular", sans-serif;
+}
+body {
+  background-color: #303030;
+}
+.container {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+/* шапка сайта */
+
+.heade {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #faf2e9;
+  padding: 10px;
+}
+.header{
+  background-color: #faf2e9;
+}
+.HeadBgIcon {
+  background: #f85f73;
+  border-radius: 18px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: solid 0px;
+}
+
+.HeadBgIcon img {
+  width: 40px;
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  font-size: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+nav a {
+  font-family: "RubicMonoOne", sans-serif;
+  text-decoration: none;
+  color: #303030;
+  padding: 5px;
+  white-space: nowrap;
+}
+
+/* Основной контейнер */
+.user-profile-container {
+  display: flex;
+  min-height: 91vh;
+  background-color: #303030;
+  color: #faf2e9;
+}
+
+/* Левая часть - информация о пользователе */
+.user-info-section {
+  flex: 3;
+  padding: 40px;
+  background-color: #2A2A2A;
+  border-right: 1px solid #444;
+}
+
+.user-profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.profile-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f85f73;
+  filter: grayscale(100%) brightness(90%);
+}
+
+.edit-profile-btn {
+  background: none;
+  border: none;
+  color: #f85f73;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-name {
+  font-family: 'RubicMonoOne', sans-serif;
+  font-size: 24px;
+  color: #faf2e9;
+}
+
+.user-id {
+  color: #999;
+  font-size: 14px;
+}
+
+.info-field {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.field-label {
+  font-weight: bold;
+  color: #faf2e9;
+}
+
+.field-value {
+  color: #faf2e9;
+}
+
+.password-field {
+  position: relative;
+}
+
+.show-password-btn {
+  position: absolute;
+  right: 0;
+  top: -20px;
+  background: none;
+  border: none;
+  color: #f85f73;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.logout-btn {
+  margin-top: 30px;
+  padding: 12px 20px;
+  background-color: #f85f73;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'RubicMonoOne', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #e04d60;
+}
+
+/* Правая часть - история заказов */
+.orders-section {
+  flex: 7;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.orders-title {
+  font-family: 'RubicMonoOne', sans-serif;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #faf2e9;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  display: flex;
+  background-color: #faf2e9;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #2A2A2A;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+.order-image {
+  width: 120px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  filter: grayscale(100%) brightness(90%);
+}
+
+.order-info {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.order-number {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.order-date {
+  color: #666;
+  font-size: 14px;
+}
+
+.order-items-preview {
+  flex: 1;
+  color: #444;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-total {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.view-details-btn {
+  padding: 8px 15px;
+  background-color: #f85f73;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'RubicMonoOne', sans-serif;
+  font-size: 12px;
+  transition: all 0.3s;
+}
+
+.view-details-btn:hover {
+  background-color: #e04d60;
+  transform: translateY(-2px);
+}
+
+/* Модальное окно с деталями заказа */
+ /* Стили для модального окна */
+ .order-details-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: #faf2e9;
+  border-radius: 12px;
+  color: #2A2A2A;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 600px) {
+  .modal-content {
+      padding: 20px;
+      top: 20px;
+      transform: none;
+      margin: 20px auto;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+  }
+  
+  .order-items-list {
+      max-height: 200px;
+      overflow-y: auto;
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal-order-title {
+  font-family: 'RubicMonoOne', sans-serif;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.modal-order-date {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.modal-order-status {
+  margin-bottom: 20px;
+}
+
+.status-delivered {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.order-items-list {
+  margin: 20px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.order-item:last-child {
+  margin-bottom: 0;
+}
+
+.item-name {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.item-details {
+  color: #666;
+  font-size: 14px;
+}
+
+.item-total {
+  font-weight: bold;
+}
+
+.order-summary {
+  margin: 20px 0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.total-row {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.repeat-order-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #f85f73;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'RubicMonoOne', sans-serif;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.repeat-order-btn:hover {
+  background-color: #e04d60;
+  transform: translateY(-2px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .user-profile-container {
+      flex-direction: column;
+  }
+  
+  .user-info-section {
+      border-right: none;
+      border-bottom: 1px solid #444;
+  }
+  
+  .order-card {
+      flex-direction: column;
+  }
+  
+  .order-image {
+      width: 100%;
+      height: 150px;
+  }
+}
+
+
+
+.fot_part {
+  background: linear-gradient(to bottom, #303030 80%, #faf2e9 20%);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: end;
+  .icn {
+    position: absolute;
+    width: 90px;
+  }
+}
+
+.fote {
+  background-color: #faf2e9;
+}
+.fote hr {
+  width: 100%;
+  height: 11px;
+  background-color: #303030;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.fote p {
+  font-family: "Arial-Regular";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 122%;
+  letter-spacing: 0.01em;
+  color: #303030;
+  opacity: 0.63;
+}
+.fote a {
+  font-family: "Arial-Regular";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 122%;
+  letter-spacing: 0.01em;
+  color: #303030;
+  opacity: 0.63;
+}
+.nav1 {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 20px;
+}
+.nav2 {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 7px;
+  margin-top: 20px;
+}
+.polit {
+  font-family: "Arial-Regular";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 122%;
+  letter-spacing: 0.01em;
+  color: #303030;
+  opacity: 0.63;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  padding-bottom: 10px;
+}
+.dffd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

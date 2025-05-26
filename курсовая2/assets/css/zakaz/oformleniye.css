@@ -1,0 +1,339 @@
+font-face {
+  font-family: "Arial-Regular";
+  src: url("/assets/fonts/arialmt.ttf");
+}
+@font-face {
+  font-family: "Arial-Bold";
+  src: url("/assets/fonts/arial_bolditalicmt.ttf");
+}
+
+@font-face {
+  font-family: "RubicMonoOne";
+  src: url("/assets/fonts/RubikMonoOne-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+h1,
+h2 {
+font-family: "RubicMonoOne", sans-serif;
+color: #faf2e9;
+}
+
+
+body {
+  background-color: #303030;
+}
+.container {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+
+ /* шапка сайта */
+  
+ .heade {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #faf2e9;
+  padding: 10px;
+}
+.header{
+  background-color: #faf2e9;
+}
+.HeadBgIcon {
+  background: #f85f73;
+  border-radius: 18px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: solid 0px;
+}
+
+.HeadBgIcon img {
+  width: 40px;
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  font-size: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #303030;
+  padding: 5px;
+  white-space: nowrap;
+  font-family: "RubicMonoOne", sans-serif;
+}
+
+.main{
+  h1{
+      margin-top: 50px;
+  }
+}
+
+
+
+/* Стили для страницы оформления заказа */
+.checkout-container {
+  margin: 30px 0 50px;
+}
+
+.checkout-columns {
+  display: flex;
+  gap: 30px;
+}
+
+.checkout-form, .order-summary {
+  flex: 1;
+}
+
+.checkout-form {
+  background: #faf2e9;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.order-summary {
+  background: #faf2e9;
+  padding: 25px;
+  border-radius: 16px;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+h2 {
+  font-family: 'RubicMonoOne', sans-serif;
+  color: #303030;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #303030;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  background: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #666;
+}
+
+.payment-methods {
+  margin-top: 20px;
+}
+
+.payment-method {
+  margin-bottom: 12px;
+}
+
+.payment-method input {
+  margin-right: 10px;
+}
+
+.order-items {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.order-item .item-name {
+  width: 60%;
+  font-weight: bold;
+}
+
+.order-item .item-quantity {
+  width: 20%;
+  text-align: right;
+  color: #666;
+}
+
+.order-item .item-total {
+  width: 20%;
+  text-align: right;
+  font-weight: bold;
+}
+
+.order-totals {
+  margin-top: 20px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.total-row:last-child {
+  border-bottom: none;
+}
+
+.grand-total {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.place-order-btn {
+  width: 100%;
+  padding: 15px;
+  background: #f85f73;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'RubicMonoOne', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.place-order-btn:hover {
+  background: #e04d60;
+}
+
+.privacy-notice {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .checkout-columns {
+    flex-direction: column;
+  }
+  
+  .order-summary {
+    position: static;
+    margin-top: 30px;
+  }
+}
+
+
+
+
+
+.fot_part {
+  background: linear-gradient(to bottom, #303030 80%, #faf2e9 20%);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: end;
+  .icn {
+    position: absolute;
+    width: 90px;
+  }
+}
+
+.fote {
+  background-color: #faf2e9;
+}
+.fote hr {
+  width: 100%;
+  height: 11px;
+  background-color: #303030;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.fote p {
+  font-family: "Arial-Regular";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 122%;
+  letter-spacing: 0.01em;
+  color: #303030;
+  opacity: 0.63;
+}
+.fote a {
+  font-family: "Arial-Regular";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 122%;
+  letter-spacing: 0.01em;
+  color: #303030;
+  opacity: 0.63;
+}
+.nav1 {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 20px;
+}
+.nav2 {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 7px;
+  margin-top: 20px;
+}
+.polit {
+  font-family: "Arial-Regular";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 122%;
+  letter-spacing: 0.01em;
+  color: #303030;
+  opacity: 0.63;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  padding-bottom: 10px;
+}
+.dffd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,38 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Регистрация</title>
     <link rel="stylesheet" href="/assets/css/registration.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="registration-image">
-    </div>
-
+  </head>
+  <body>
     <div class="registration-form">
-        <div class="form-header">
-            <h2>войти</h2>
-        </div>
+      <div class="form-header">
+        <h2>регистрация</h2>
+      </div>
 
-        <div class="regg">
-            <div class="registration-block">
-                <form>
-                    <div class="form-group">
-                        <input type="email" id="email" required placeholder="Email или номер телефона">
-                    </div>
-                    
-                    <div class="form-group">
-                        <input type="password" id="password" required placeholder="Пароль">
-                    </div>
-        
-                    <button type="submit" class="submit-btn">войти</button>
-                </form>
+      <div class="regg">
+        <div class="registration-block">
+          <form id="registrationForm" action="/assets/html/pers_account.html">
+            <div class="form-row">
+              <div class="form-group half-width">
+                <input type="text" id="firstName" required placeholder="Имя" />
+                <div class="error-message" id="firstNameError"></div>
+              </div>
+              <div class="form-group half-width">
+                <input
+                  type="text"
+                  id="lastName"
+                  required
+                  placeholder="Фамилия"
+                />
+                <div class="error-message" id="lastNameError"></div>
+              </div>
             </div>
-            <div class="login-link"> <a href="#">Нет аккаунта? Зарегистрируйтесь!</a>
+
+            <div class="form-group">
+              <input type="email" id="email" required placeholder="Email" />
+              <div class="error-message" id="emailError"></div>
             </div>
+
+            <div class="form-group">
+              <input
+                type="tel"
+                id="phone"
+                required
+                placeholder="Номер телефона"
+              />
+              <div class="error-message" id="phoneError"></div>
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                id="password"
+                required
+                placeholder="Пароль"
+              />
+              <div class="password-hint">
+                Пароль должен содержать не менее 8 символов
+              </div>
+              <div class="error-message" id="passwordError"></div>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="password"
+                id="confirmPassword"
+                required
+                placeholder="Повторите пароль"
+              />
+              <div class="error-message" id="confirmPasswordError"></div>
+            </div>
+
+            
+          </form>
+          <form action="/assets/html/pers_account.html"><button type="submit" class="submit-btn">зарегистрироваться</button></form>
         </div>
+        <div class="login-link">
+          <a href="/assets/html/signoout.html">Уже есть аккаунт? Войдите!</a>
+        </div>
+      </div>
     </div>
-</body>
-</body>
+
+    <div class="registration-image">
+      <div class="image-overlay">
+        <h1>Добро пожаловать!</h1>
+        <p>Присоединяйтесь к нашему сообществу</p>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Сбрасываем все ошибки
+          document.querySelectorAll(".error-message").forEach((el) => {
+            el.style.display = "none";
+          });
+
+          // Получаем значения полей
+          const firstName = document.getElementById("firstName").value.trim();
+          const lastName = document.getElementById("lastName").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+          const address = document.getElementById("address").value.trim();
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+          let isValid = true;
+
+          // Валидация имени
+          if (firstName.length < 2) {
+            document.getElementById("firstNameError").textContent =
+              "Имя слишком короткое";
+            document.getElementById("firstNameError").style.display = "block";
+            isValid = false;
+          }
+
+          // Валидация фамилии
+          if (lastName.length < 2) {
+            document.getElementById("lastNameError").textContent =
+              "Фамилия слишком короткая";
+            document.getElementById("lastNameError").style.display = "block";
+            isValid = false;
+          }
+
+          // Валидация email
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            document.getElementById("emailError").textContent =
+              "Введите корректный email";
+            document.getElementById("emailError").style.display = "block";
+            isValid = false;
+          }
+
+          // Валидация телефона (простая проверка на минимальную длину)
+          if (phone.length < 7) {
+            document.getElementById("phoneError").textContent =
+              "Введите корректный номер телефона";
+            document.getElementById("phoneError").style.display = "block";
+            isValid = false;
+          }
+
+          // Валидация пароля
+          if (password.length < 8) {
+            document.getElementById("passwordError").textContent =
+              "Пароль должен содержать не менее 8 символов";
+            document.getElementById("passwordError").style.display = "block";
+            isValid = false;
+          }
+
+          // Проверка совпадения паролей
+          if (password !== confirmPassword) {
+            document.getElementById("confirmPasswordError").textContent =
+              "Пароли не совпадают";
+            document.getElementById("confirmPasswordError").style.display =
+              "block";
+            isValid = false;
+          }
+
+          // Если все валидно, отправляем форму
+          if (isValid) {
+            // Здесь можно отправить данные на сервер
+            alert("Регистрация успешна!");
+            // window.location.href = './pers_account.html'; // Перенаправление
+
+            // Для демонстрации просто показываем данные в консоли
+            const userData = {
+              firstName,
+              lastName,
+              email,
+              phone,
+              address,
+              password, // В реальном приложении пароль не должен логироваться
+            };
+            console.log("Данные для регистрации:", userData);
+          }
+        });
+
+      // Маска для телефона (простой вариант)
+      document.getElementById("phone").addEventListener("input", function (e) {
+        let value = e.target.value.replace(/\D/g, "");
+        if (value.length > 0) {
+          value = "+" + value;
+        }
+        e.target.value = value;
+      });
+    </script>
+  </body>
 </html>

@@ -1,182 +1,381 @@
+/* Основные стили остаются как в оригинале, добавляем новые */
+
 @font-face {
-    font-family: "Arial-Regular";
-    src: url("../fonts/arialmt.ttf");
-  }
-  
-  @font-face {
-    font-family: "Arial-Bold";
-    src: url("../fonts/arial_bolditalicmt.ttf");
-  }
-  
-  @font-face {
-    font-family: "RubicMonoOne";
-    src: url("../fonts/RubikMonoOne-Regular.ttf");
-  }
+  font-family: "Arial-Regular";
+  src: url("../fonts/arialmt.ttf");
+}
+
+@font-face {
+  font-family: "Arial-Bold";
+  src: url("../fonts/arial_bolditalicmt.ttf");
+}
+
+@font-face {
+  font-family: "RubicMonoOne";
+  src: url("../fonts/RubikMonoOne-Regular.ttf");
+}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    overflow: hidden;
-    background-color: #303030;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  background-color: #303030;
 }
 
-/* Секция с изображением */
+body {
+  flex-direction: row-reverse; /* Меняем порядок секций */
+}
+
+.registration-form {
+  flex: 5; /* Уменьшаем ширину формы */
+}
+
 .registration-image {
-    flex: 7;
-    background-image: url(/assets/images/imagesee/registration/burger.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    filter: grayscale(100%) brightness(90%);
+  flex: 7;
+  background-image: url(/assets/images/imagesee/registration/burger.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  filter: grayscale(100%) brightness(90%);
 }
 
 .image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 80px;
-    color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 80px;
+  color: white;
+  text-align: right; /* Текст справа */
 }
 
 .image-overlay h1 {
-    font-family: 'RubicMonoOne', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+  font-family: 'RubicMonoOne', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-/* Форма регистрации */
-.registration-form {
-    flex: 3;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #303030;
-    overflow-y: auto;
-    
-}
- .registration-block {
-    background-color: #2A2A2A;
-    padding: 31px 30px 25px 14px;
-    border-radius: 13px;
-    width: 346px;
-height: 223px;
- }
-.regg{
-    width: 346px;
-}
-.form-header {
-    margin-bottom: 30px;
+.image-overlay p {
+  font-size: 1.2rem;
+  opacity: 0.9;
 }
 
-.form-header h2 {
-    font-family: "RubicMonoOne";
-  font-size: clamp(2rem, 3vw, 48px);
-  color: #faf2e9;
-  margin:  0 0 40px 15px;
-  padding-top: 60px;
+/* Новые стили для формы */
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
-.form-group {
-    margin-bottom: 20px;
+.half-width {
+  flex: 1;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
+.password-hint {
+  font-size: 0.8rem;
+  color: rgba(250, 242, 233, 0.6);
+  margin-top: 5px;
 }
 
-.form-group input {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
+.error-message {
+  color: #f85f73;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: none;
 }
 
-.submit-btn {
-    background-color: #f85f73;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 12px;
-    font-size: 11px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
-    font-family: 'RubicMonoOne', sans-serif;
-    width: 91px;
-}
-
-.submit-btn:hover {
-    background-color: #e04d60;
-    transform: translateY(-2px);
-}
-
-.login-link {
-    text-align: right;
-    margin-top: 20px;
-    color: #666;
-}
-
-.login-link a {
-    font-weight: 400;
-font-size: 11px;
-line-height: 150%;
-letter-spacing: -0.02em;
-text-decoration: underline;
-text-decoration-skip-ink: none;
-color: rgba(250, 242, 233, 0.69);
-}
-
-/* Мобильная версия */
+/* Адаптив */
 @media (max-width: 768px) {
-    body {
-        flex-direction: column;
-        height: auto;
-        overflow-y: auto;
-    }
-
-    .registration-image {
-        flex: none;
-        height: 300px;
-        width: 100%;
-    }
-
-    .image-overlay {
-        padding: 40px 20px;
-        justify-content: flex-end;
-    }
-
-    .image-overlay h1 {
-        font-size: 2rem;
-    }
-
-    .registration-form {
-        flex: none;
-        padding: 40px 20px;
-    }
+  body {
+      flex-direction: column;
+  }
+  
+  .registration-image {
+      height: 200px; /* Уменьшаем высоту изображения */
+      order: -1; /* Перемещаем изображение вверх */
+  }
+  
+  .image-overlay {
+      padding: 20px;
+      text-align: center;
+      justify-content: center;
+  }
+  
+  .image-overlay h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+  }
+  
+  .form-row {
+      flex-direction: column;
+      gap: 0;
+  }
+  
+  .registration-form {
+      padding: 20px;
+  }
+  
+  .registration-block {
+      width: 100%;
+      padding: 20px;
+  }
 }
 
 /* Анимации */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 .registration-form {
-    animation: fadeIn 0.5s ease-out;
+  animation: slideInRight 0.5s ease-out;
 }
+
+@font-face {
+        font-family: "Arial-Regular";
+        src: url("../fonts/arialmt.ttf");
+      }
+
+      @font-face {
+        font-family: "Arial-Bold";
+        src: url("../fonts/arial_bolditalicmt.ttf");
+      }
+
+      @font-face {
+        font-family: "RubicMonoOne";
+        src: url("../fonts/RubikMonoOne-Regular.ttf");
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: row-reverse;
+        overflow: hidden;
+        background-color: #303030;
+      }
+
+      /* Секция с изображением */
+      .registration-image {
+        flex: 7;
+        background-image: url(https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        filter: grayscale(100%) brightness(90%);
+      }
+
+      .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 80px;
+        color: white;
+        text-align: right;
+      }
+
+      .image-overlay h1 {
+        font-family: "RubicMonoOne", sans-serif;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .image-overlay p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      /* Форма регистрации */
+      .registration-form {
+        flex: 5;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #303030;
+        overflow-y: auto;
+      }
+
+      .registration-block {
+        background-color: #2a2a2a;
+        padding: 31px 30px 25px 14px;
+        border-radius: 13px;
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .regg {
+        width: 100%;
+      }
+
+      .form-header {
+        margin-bottom: 30px;
+      }
+
+      .form-header h2 {
+        font-family: "RubicMonoOne";
+        font-size: clamp(2rem, 3vw, 48px);
+        color: #faf2e9;
+        margin: 0 0 40px 15px;
+        padding-top: 60px;
+      }
+
+      .form-row {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+        flex: 1;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #444;
+        border-radius: 8px;
+        font-size: 16px;
+        background-color: #3a3a3a;
+        color: #faf2e9;
+      }
+
+      .form-group input:focus {
+        outline: none;
+        border-color: #f85f73;
+      }
+
+      .submit-btn {
+        background-color: #f85f73;
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 12px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+        font-family: "RubicMonoOne", sans-serif;
+        margin-top: 10px;
+      }
+
+      .submit-btn:hover {
+        background-color: #e04d60;
+        transform: translateY(-2px);
+      }
+
+      .login-link {
+        text-align: right;
+        margin-top: 20px;
+        color: #666;
+      }
+
+      .login-link a {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: rgba(250, 242, 233, 0.69);
+      }
+
+      .password-hint {
+        font-size: 0.8rem;
+        color: rgba(250, 242, 233, 0.6);
+        margin-top: 5px;
+      }
+
+      .error-message {
+        color: #f85f73;
+        font-size: 0.8rem;
+        margin-top: 5px;
+        display: none;
+      }
+
+      /* Мобильная версия */
+      @media (max-width: 768px) {
+        body {
+          flex-direction: column;
+          height: auto;
+          overflow-y: auto;
+        }
+
+        .registration-image {
+          flex: none;
+          height: 200px;
+          width: 100%;
+          order: -1;
+        }
+
+        .image-overlay {
+          padding: 20px;
+          text-align: center;
+          justify-content: center;
+        }
+
+        .image-overlay h1 {
+          font-size: 1.8rem;
+          margin-bottom: 10px;
+        }
+
+        .registration-form {
+          flex: none;
+          padding: 20px;
+        }
+
+        .form-row {
+          flex-direction: column;
+          gap: 0;
+        }
+
+        .form-header h2 {
+          padding-top: 20px;
+          margin-bottom: 20px;
+        }
+      }
+
+      /* Анимации */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .registration-form {
+        animation: fadeIn 0.5s ease-out;
+      }
