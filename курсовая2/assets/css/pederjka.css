@@ -26,17 +26,21 @@ body {
 }
 
 /* шапка сайта */
+.header {
+  background-color: #faf2e9;
+  padding: 10px 0;
+  position: relative;
+  z-index: 100;
+}
 
 .heade {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #faf2e9;
-  padding: 10px;
+  padding: 0 10px;
 }
-.header{
-  background-color: #faf2e9;
-}
+
 .HeadBgIcon {
   background: #f85f73;
   border-radius: 18px;
@@ -69,6 +73,98 @@ nav a {
   color: #303030;
   padding: 5px;
   white-space: nowrap;
+}
+
+/* Бургер-меню для мобильной навигации */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+  }
+  
+  .heade {
+    padding: 0;
+  }
+  
+  .burger-menu {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    z-index: 101;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 250px;
+    background-color: #faf2e9;
+    padding: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 100;
+    border-radius: 15px 0 0 15px;
+    margin-top: 10px;
+  }
+
+  nav.active {
+    transform: translateX(0);
+  }
+
+  .burger-icon {
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .burger-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #303030;
+    transition: all 0.3s ease;
+  }
+
+  .burger-menu.active .burger-icon span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger-menu.active .burger-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.active .burger-icon span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  nav li {
+    width: 100%;
+    text-align: left;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    background-color: #f85f73;
+    color: #faf2e9 !important;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #e04d60;
+  }
 }
 
 /* hero */
@@ -211,7 +307,7 @@ p {
 /* Форма обратной связи */
 
 .feedback-form {
-  margin: 0 15px 0 15px;
+  margin: 0 15px 100px 15px;
 }
 .feedback-form h2 {
   margin: 40px 0 30px 0;
@@ -297,34 +393,41 @@ select {
   background: #303030;
 }
 
-
-
+/* Футер */
 .fot_part {
   background: linear-gradient(to bottom, #303030 80%, #faf2e9 20%);
   display: flex;
   justify-content: center;
   position: relative;
   align-items: end;
-  margin-top: 200px;
   .icn {
-    position: absolute;
     width: 90px;
+  }
+  form{
+    position: absolute;
+    button{
+      background-color: #faf2e9;
+    border: none;
+    }
   }
 }
 
 .fote {
   background-color: #faf2e9;
 }
+
 .fote hr {
   width: 100%;
   height: 11px;
   background-color: #303030;
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
 }
-.fote p {
+
+.fote p, .fote a {
   font-family: "Arial-Regular";
   font-weight: 400;
   font-size: 13px;
@@ -333,21 +436,14 @@ select {
   color: #303030;
   opacity: 0.63;
 }
-.fote a {
-  font-family: "Arial-Regular";
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 122%;
-  letter-spacing: 0.01em;
-  color: #303030;
-  opacity: 0.63;
-}
+
 .nav1 {
   display: flex;
   flex-direction: column;
   gap: 7px;
   margin-top: 20px;
 }
+
 .nav2 {
   display: flex;
   flex-direction: column;
@@ -355,6 +451,7 @@ select {
   gap: 7px;
   margin-top: 20px;
 }
+
 .polit {
   font-family: "Arial-Regular";
   font-weight: 400;
@@ -369,8 +466,58 @@ select {
   margin-top: 8px;
   padding-bottom: 10px;
 }
+
 .dffd {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Адаптивность футера */
+@media (max-width: 768px) {
+  .fot_part .icn {
+    width: 70px;
+  }
+
+  .nav {
+    flex-direction: column;
+   margin-left: 20px; 
+   gap: 20px;
+  }
+
+  .nav2 {
+    text-align: left;
+    margin-top: 15px;
+    
+  }
+
+  .polit {
+    font-size: 12px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    margin: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .polit {
+    justify-content: left;
+    padding-left: 15px;
+    padding-top: 10px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  /* Шапка */
+  .HeadBgIcon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+  }
+
+  .HeadBgIcon img {
+    width: 30px;
+    height: 30px;
+  }
 }

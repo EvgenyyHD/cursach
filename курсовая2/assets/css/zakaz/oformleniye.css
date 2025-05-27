@@ -270,8 +270,14 @@ h2 {
   position: relative;
   align-items: end;
   .icn {
-    position: absolute;
     width: 90px;
+  }
+  form{
+    position: absolute;
+    button{
+      background-color: #faf2e9;
+    border: none;
+    }
   }
 }
 

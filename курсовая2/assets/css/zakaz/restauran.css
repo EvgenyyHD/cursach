@@ -38,18 +38,21 @@ h3 {
   color: #faf2e9;
 }
 
-/* Шапка */
+.header {
+  background-color: #faf2e9;
+  padding: 10px 0;
+  position: relative;
+  z-index: 100; /* Добавлено чтобы шапка была выше других элементов */
+}
+
 .heade {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #faf2e9;
-  padding: 10px;
+  padding: 0 10px;
 }
 
-.header{
-    background-color: #faf2e9;
-  }
 .HeadBgIcon {
   background: #f85f73;
   border-radius: 18px;
@@ -70,7 +73,7 @@ h3 {
 nav ul {
   display: flex;
   list-style: none;
-  font-family: "RubicMonoOne", sans-serif;
+  
   font-size: 15px;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -78,11 +81,103 @@ nav ul {
 }
 
 nav a {
+  font-family: "RubicMonoOne", sans-serif;
   text-decoration: none;
   color: #303030;
   padding: 5px;
   white-space: nowrap;
-  font-family: "RubicMonoOne", sans-serif;
+}
+
+/* Бургер-меню для мобильной навигации */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+  }
+  
+  .heade {
+    padding: 0;
+  }
+  
+  .burger-menu {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    z-index: 101; /* Увеличено чтобы быть выше меню */
+  }
+
+  nav {
+    position: absolute; /* Изменено с fixed на absolute */
+    top: 100%; /* Меню будет начинаться сразу под шапкой */
+    right: 0;
+    width: 250px;
+    background-color: #faf2e9;
+    padding: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 100;
+    border-radius: 15px 0 0 15px;
+    margin-top: 10px; /* Добавлено для отступа от шапки */
+  }
+
+  nav.active {
+    transform: translateX(0);
+  }
+
+  .burger-icon {
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .burger-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #303030;
+    transition: all 0.3s ease;
+  }
+
+  .burger-menu.active .burger-icon span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger-menu.active .burger-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.active .burger-icon span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  nav li {
+    width: 100%;
+    text-align: left;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    background-color: #f85f73;
+    color: #faf2e9 !important;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #e04d60;
+  }
 }
 
 /* Основной контент */
@@ -233,8 +328,14 @@ nav a {
   position: relative;
   align-items: end;
   .icn {
-    position: absolute;
     width: 90px;
+  }
+  form{
+    position: absolute;
+    button{
+      background-color: #faf2e9;
+    border: none;
+    }
   }
 }
 
@@ -300,3 +401,35 @@ nav a {
   flex-direction: column;
   align-items: center;
 }
+
+
+@media (max-width: 480px) {
+  /* Шапка */
+  .HeadBgIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .HeadBgIcon img {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav2 {
+    text-align: left;
+    margin-top: 10px;
+  }
+  .fote p, .fote a {
+    font-size: 12px;
+  }
+  .polit{
+    justify-content: left;
+    padding-left: 20px;
+    padding-top: 7px;
+  }}

@@ -1,6 +1,4 @@
-/* Стили для страницы акций */
-
-
+/* шапка сайта */
 @font-face {
   font-family: "Arial-Regular";
   src: url("../fonts/arialmt.ttf");
@@ -29,17 +27,21 @@ body {
 }
 
 /* шапка сайта */
+.header {
+  background-color: #faf2e9;
+  padding: 10px 0;
+  position: relative;
+  z-index: 100;
+}
 
 .heade {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #faf2e9;
-  padding: 10px;
+  padding: 0 10px;
 }
-.header{
-  background-color: #faf2e9;
-}
+
 .HeadBgIcon {
   background: #f85f73;
   border-radius: 18px;
@@ -73,6 +75,99 @@ nav a {
   padding: 5px;
   white-space: nowrap;
 }
+
+/* Бургер-меню для мобильной навигации */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+  }
+  
+  .heade {
+    padding: 0;
+  }
+  
+  .burger-menu {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    z-index: 101;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 250px;
+    background-color: #faf2e9;
+    padding: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 100;
+    border-radius: 15px 0 0 15px;
+    margin-top: 10px;
+  }
+
+  nav.active {
+    transform: translateX(0);
+  }
+
+  .burger-icon {
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .burger-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #303030;
+    transition: all 0.3s ease;
+  }
+
+  .burger-menu.active .burger-icon span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger-menu.active .burger-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.active .burger-icon span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  nav li {
+    width: 100%;
+    text-align: left;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    background-color: #f85f73;
+    color: #faf2e9 !important;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #e04d60;
+  }
+}
+
 /* Сезонное предложение */
 .season-offer {
   margin: 40px auto;
@@ -187,8 +282,9 @@ nav a {
   grid-template-columns: 2rem 0.5rem 3rem 0.5rem 3rem 0.5rem 3rem;
   font-size: 3rem;
   justify-items: center;
-  }
-  .timer__item {
+}
+
+.timer__item {
   position: relative;
   font-family: "Arial-Regular";
   font-weight: 400;
@@ -196,24 +292,25 @@ nav a {
   line-height: 122%;
   letter-spacing: 0.01em;
   color: #fff;
-  }
-  .separator{
+}
+
+.separator {
   font-family: "Arial-Regular";
   font-weight: 400;
   font-size: 12px;
   line-height: 122%;
   letter-spacing: 0.01em;
   color: #fff;
-  }
-  .timer__item::before {
+}
+
+.timer__item::before {
   content: attr(data-title);
   display: block;
   position: absolute;
   bottom: -0.75rem;
   left: 50%;
   transform: translateX(-50%);
-  
-  }
+}
 
 .promo-content {
   padding: 25px;
@@ -257,9 +354,6 @@ nav a {
 }
 
 /* Слайдер акций */
-
-
-
 .promo-slider {
   margin: 60px 0;
 }
@@ -419,124 +513,7 @@ nav a {
   background: url('../images/dessert-bg.jpg') center/cover;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-  .promo-card {
-    flex-direction: column;
-  }
-  
-  .promo-image {
-    width: 100%;
-    height: 100px;
-  }
-  
-  .slider-item {
-    min-width: calc(50% - 15px);
-  }
-  
-  .offer-items {
-    gap: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .slider-item {
-    min-width: 100%;
-  }
-  
-  .categories-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .season-offer {
-    margin: 20px auto;
-  }
-  
-  .offer-banner {
-    padding: 20px;
-  }
-}
-
-
-.fot_part{
-  background: linear-gradient(to bottom,#303030 80%, #faf2e9 20%);
-  display: flex;
-  justify-content: center;
-  position: relative;
-  align-items: end;
-  .icn{
-    position: absolute;
-    width: 90px;
-  }
-
-}
-
-
-
-
-.fote{
-background-color: #faf2e9;
-}
-.fote hr {
-  width: 100%;
-height: 11px;background-color: #303030;
-}
-.nav{
-  display: flex;
-  justify-content: space-between;
-}
-.fote p{
-  font-family: "Arial-Regular";
-font-weight: 400;
-font-size: 13px;
-line-height: 122%;
-letter-spacing: 0.01em;
-color: #303030;
-opacity: 0.63;
-}
-.fote a{
-  font-family: "Arial-Regular";
-font-weight: 400;
-font-size: 13px;
-line-height: 122%;
-letter-spacing: 0.01em;
-color: #303030;
-opacity: 0.63;
-}
-.nav1{
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  margin-top: 20px;
-}
-.nav2{
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  gap: 7px;
-  margin-top: 20px;
-}
-.polit{
-  font-family: "Arial-Regular";
-font-weight: 400;
-font-size: 13px;
-line-height: 122%;
-letter-spacing: 0.01em;
-color: #303030;
-opacity: 0.63;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 8px;
-  padding-bottom: 10px;
-}
-.dffd{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
+/* Футер */
 .fot_part {
   background: linear-gradient(to bottom, #303030 80%, #faf2e9 20%);
   display: flex;
@@ -544,24 +521,33 @@ opacity: 0.63;
   position: relative;
   align-items: end;
   .icn {
-    position: absolute;
     width: 90px;
+  }
+  form{
+    position: absolute;
+    button{
+      background-color: #faf2e9;
+    border: none;
+    }
   }
 }
 
 .fote {
   background-color: #faf2e9;
 }
+
 .fote hr {
   width: 100%;
   height: 11px;
   background-color: #303030;
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
 }
-.fote p {
+
+.fote p, .fote a {
   font-family: "Arial-Regular";
   font-weight: 400;
   font-size: 13px;
@@ -570,21 +556,14 @@ opacity: 0.63;
   color: #303030;
   opacity: 0.63;
 }
-.fote a {
-  font-family: "Arial-Regular";
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 122%;
-  letter-spacing: 0.01em;
-  color: #303030;
-  opacity: 0.63;
-}
+
 .nav1 {
   display: flex;
   flex-direction: column;
   gap: 7px;
   margin-top: 20px;
 }
+
 .nav2 {
   display: flex;
   flex-direction: column;
@@ -592,6 +571,7 @@ opacity: 0.63;
   gap: 7px;
   margin-top: 20px;
 }
+
 .polit {
   font-family: "Arial-Regular";
   font-weight: 400;
@@ -606,8 +586,195 @@ opacity: 0.63;
   margin-top: 8px;
   padding-bottom: 10px;
 }
+
 .dffd {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  /* Сезонное предложение */
+  .season-offer {
+    margin: 20px auto;
+  }
+
+  .offer-banner {
+    padding: 20px 15px;
+    border-radius: 20px;
+  }
+
+  .offer-banner h2 {
+    font-size: 22px;
+  }
+
+  .offer-banner p {
+    font-size: 16px;
+  }
+
+  .offer-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .offer-item {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  /* Основные акции */
+  .promotions h1 {
+    font-size: 28px;
+    margin: 30px 0;
+  }
+
+  .promo-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .promo-card {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .promo-content {
+    padding: 20px;
+  }
+
+  .promo-image {
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+  }
+
+  .promo-image img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .timer {
+    grid-template-columns: 2rem 0.5rem 2rem 0.5rem 2rem 0.5rem 2rem;
+    font-size: 1.5rem;
+  }
+
+  /* Слайдер акций */
+  .promo-slider {
+    margin: 40px 0;
+  }
+
+  .promo-slider h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .slider-item {
+    min-width: 100%;
+    margin-right: 0;
+    padding: 15px;
+  }
+
+  .slider-controls {
+    margin-top: 15px;
+  }
+
+  .slider-controls button {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  /* Футер */
+  .fot_part .icn {
+    width: 70px;
+  }
+
+  .nav {
+    flex-direction: column;
+   margin-left: 20px; 
+   gap: 20px;
+  }
+
+  .nav2 {
+    text-align: left;
+    margin-top: 15px;
+    
+  }
+
+  .polit {
+    font-size: 12px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    margin: 3px;
+
+  }
+}
+
+@media (max-width: 480px) {
+  /* Шапка */
+  .HeadBgIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .HeadBgIcon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Сезонное предложение */
+  .offer-banner h2 {
+    font-size: 20px;
+  }
+
+  .offer-item span {
+    font-size: 16px;
+    padding: 2px 8px;
+  }
+
+  .offer-banner button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  /* Основные акции */
+  .promotions h1 {
+    font-size: 24px;
+  }
+
+  .promo-card h3 {
+    font-size: 18px;
+  }
+
+  .promo-card p {
+    font-size: 14px;
+  }
+
+  .promo-code {
+    font-size: 12px;
+  }
+
+  /* Таймер */
+  .timer {
+    grid-template-columns: 1.5rem 0.3rem 1.5rem 0.3rem 1.5rem 0.3rem 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  /* Слайдер */
+  .slider-item h4 {
+    font-size: 16px;
+  }
+
+  .slider-item p {
+    font-size: 13px;
+  }
+  
+  .polit {
+    justify-content: left;
+    padding-left: 15px;
+    padding-top: 10px;
+  }
 }
